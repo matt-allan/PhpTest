@@ -1,0 +1,21 @@
+:8080
+
+  tls off
+
+  root /var/app/app/public
+
+  fastcgi / php_fpm:9000 php {
+    root /var/app/app/public
+    env FOO bar
+  }
+
+ rewrite {
+   regexp .*
+   ext /
+   to /index.php?{query}
+ }
+
+
+
+log stdout
+errors stdout
