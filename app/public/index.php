@@ -3,10 +3,9 @@
 declare(strict_types=1);
 
 $env = getenv();
-//foreach ($env as $key => $value) {
-//    var_dump($key);
-//    echo "<br/>\n";
-//}
+foreach ($env as $key => $value) {
+   var_dump($key);
+}
 
 $var = 'FOO';
 var_dump(getenv($var));
