@@ -5,8 +5,8 @@
   root /var/app/app/public
 
   fastcgi / php_fpm:9000 php {
+    env BAZ quux
     root /var/app/app/public
-    env FOO bar
   }
 
  rewrite {
